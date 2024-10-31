@@ -1,10 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'; // Import createRoot from react-dom/client
 import './index.css';
 import Tree from './Tree/Tree';
 import registerServiceWorker from './registerServiceWorker';
 
-var simpsonsTree = {
+const simpsonsTree = {
+  God: {
+   id: "God",
+   name: "GOD of heaven",
+   partners: ["Godess"],
+   children: { Godess: ["abe"] }
+  },
+  Godess: {id:"Godess", name: "Godess"},
   abe: {
     id: "abe",
     name: "Abraham J. (Grandpa) Simpson",
@@ -33,12 +40,14 @@ var simpsonsTree = {
   millhouse_jr: {id:"millhouse_jr", name: "Millhouse Van Houten Jr."}
 };
 
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container); // Create a root
 
-ReactDOM.render(
+root.render(
   <Tree
-    root = 'abe'
-    datalist = {JSON.parse(JSON.stringify(simpsonsTree))} />,
-  document.getElementById('root')
+    root='God'
+    datalist={JSON.parse(JSON.stringify(simpsonsTree))}
+  />
 );
 
 registerServiceWorker();
