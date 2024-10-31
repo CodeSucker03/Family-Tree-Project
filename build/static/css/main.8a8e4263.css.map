@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.8a8e4263.css","mappings":"AAAA,KAGE,iBAAkB,CAFlB,QAAS,CACT,SAEF,CACA,GACE,yDACF","sources":["index.css"],"sourcesContent":["body {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: serif;\r\n}\r\nh1 {\r\n  font-family: \"Palatino Linotype\", \"Book Antiqua\", Palatino, serif;\r\n}\r\n"],"names":[],"sourceRoot":""}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import * as CommonStyles from './../TreeStylesShared';
@@ -122,12 +122,21 @@ class TreeNodeMenu extends React.Component {
       <TreeNodeActions key="action_list" className="tree_actions">
         <TreeNodeHeader>Edit</TreeNodeHeader>
         <ul>
-          <li><a href="#" className="edit" onClick={this.handleToggleEditable}>Edit</a></li>
-          {!this.props.allowPartners || <li><a href="#" className="add_partner" onClick={this.handleAddPartner}>Add Partner</a></li>}
+          <li>
+            <button className="edit" onClick={this.handleToggleEditable} >Edit </button>
+          </li>
+          {/* <li><a href="#" className="edit" onClick={this.handleToggleEditable}>Edit</a></li> */}
+          {!this.props.allowPartners || 
+          <li>
+            <button className="add_partner" onClick={this.handleAddPartner}>Add Partner</button>
+          </li>}
           {this.props.partners.map(partner =>
-            <li key={'addchild_' + partner.id}><a href="#{partner.id}" className="add_child" onClick={(e) => {this.handleAddChild(e, partner.id)}}>Add a child with {partner.name}</a></li>
+            <li key={'addchild_' + partner.id}>
+              <button href="#{partner.id}" className="add_child" onClick={(e) => {this.handleAddChild(e, partner.id)}}>Add a child with {partner.name}
+              </button>
+            </li>
           )}
-          <li><a href="#" className="member_delete" onClick={this.handleDelete}>Delete</a></li>
+          <li><button className="member_delete" onClick={this.handleDelete}>Delete</button></li>
         </ul>
       </TreeNodeActions>
     ];

@@ -1,4 +1,4 @@
-import TreeMember from './TreeMember/TreeMember';
+// import TreeMember from './TreeMember/TreeMember';
 
 class TreeParser {
 
@@ -48,7 +48,7 @@ class TreeParser {
     for (let i = 0; i < root.partners.length; i++) {
       let partner_id = root.partners[i].id;
       let children_array = Array.isArray(root.children) ? root.children[i] : root.children[partner_id];
-      if (children_array === undefined || children_array === null || children_array.length == 0) continue;
+      if (children_array === undefined || children_array === null || children_array.length === 0) continue;
       children[partner_id] = children_array.map(child_item => this.dereferenceMemberDataRecursively(child_item));
     }
     root.children = children;

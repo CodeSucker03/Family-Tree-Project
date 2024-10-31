@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+// import styled from 'styled-components';
 import TreeMember from './TreeMember/TreeMember';
 import TreeParser from './TreeParser';
 
