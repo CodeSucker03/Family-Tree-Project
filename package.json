@@ -1,6 +1,5 @@
 {
   "name": "react-tree",
-  "homepage": "https://craigmc.info/react-family-tree",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
